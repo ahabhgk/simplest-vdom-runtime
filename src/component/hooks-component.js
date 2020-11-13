@@ -6,7 +6,7 @@ const resolvedPromise = Promise.resolve()
 function enqueueRender(update) {
   rerenderQueue.push(update)
   resolvedPromise.then(() => {
-    const deduped = [...new Set(rerenderQueue)]
+    const deduped = [...new Set(rerenderQueue)] // 去重，去掉没必要的更新
     rerenderQueue.length = 0
     deduped.forEach(job => job())
   })
