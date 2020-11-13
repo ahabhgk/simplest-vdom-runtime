@@ -60,6 +60,10 @@ hello  world        diff          diff
 
 ![diff](./docs/diff.png)
 
+1. 只对同级元素进行 diff（diffChildren）
+2. 两个不同类型的元素会产生出不同的树（isSameVNodeType）
+3. 开发者可以通过 key 来暗示哪些子元素在不同的渲染下能保持稳定（key diff）
+
 key diff 位于 diffChildren 这里，是 diff 算法最难的地方，代码中我们简化了很多，详细的可以看 Go deeper 链接中的链接
 
 > Vue 使用的是递归式的 diff，React16 使用的是迭代式的 diff，区别在于递归式的不可打断，迭代式的可以打断，这也决定了两个框架 feature 的不同
