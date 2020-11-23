@@ -35,7 +35,7 @@ Go deeper 链接中的链接中的链接……
 
 > Vue 是一边 diff 一边 patch；React16 是先 diff 然后对要更新的地方做标记（render phase），之后在对标记过的地方进行 patch（commit phase）。实现的不同也决定了一些 feature 的不同
 
-前两部分先不考虑组件，仅对应 DOM 结构的两种 VNode，标签（div、span……）和文本（#text）进行处理
+前两部分先不考虑组件，仅对应 DOM 结构的两种 VNode，标签（div、span……）和文本（#text）进行处理（对应 DOM 中 Element、Text、Comment 都继承于 Node 类型）
 
 ```js
 {
